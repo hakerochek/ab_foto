@@ -31,8 +31,9 @@ class Route
         }
 
         // добавляем префиксы
-        $model_name = 'Model_'.$controller_name;
-        $controller_name = 'Controller_'.$controller_name;
+        $model = $controller_name;
+        $model_name = 'model_'.$controller_name;
+        $controller_name = 'controller_'.$controller_name;
         $action_name = 'action_'.$action_name;
 
         // подцепляем файл с классом модели (файла модели может и не быть)
@@ -62,7 +63,7 @@ class Route
         }
 
         // создаем контроллер
-        $controller = new $controller_name($controller_name, $action_name, $params);
+        $controller = new $controller_name($controller_name, $action_name, $model, $params);
 
         $action = $action_name;
 

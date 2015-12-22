@@ -19,7 +19,14 @@ class Model_Article extends Model
 
     function addArticle($param)
     {
-        //return $this->db->pdo->query("INSERT INTO `articles`(`id`, `title`, `text`) VALUES ([value-1],[value-2],[value-3])");
-
+        $sql = "INSERT INTO articles (title, text) VALUES ('{$param['title']}', '{$param['text']}')";
+        return $this->db->pdo->query($sql);
     }
+
+    function updateArticle($param)
+    {
+        $sql = "UPDATE articles SET title = '{$param['title']}', text = '{$param['text']}' WHERE id = {$param['id']}";
+        return $this->db->pdo->query($sql);
+    }
+
 }

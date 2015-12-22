@@ -5,7 +5,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>ID </th>
+                <th>ID</th>
                 <th>TITLE</th>
                 <th>TEXT</th>
                 <th></th>
@@ -25,4 +25,7 @@
         </table>
     </div>
 
+</div>
+<div class="tabbable tabs-left pull-right">
+    <a class="btn btn-default btn-lg" href="/article/add"><span class="glyphicon glyphicon-plus"></span> Add</a>
 </div>
