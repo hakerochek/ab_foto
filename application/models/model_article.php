@@ -17,15 +17,15 @@ class Model_Article extends Model
         return $this->db->pdo->query("DELETE FROM articles WHERE id=$id");
     }
 
-    function addArticle($param)
+    function addArticle($params)
     {
-        $sql = "INSERT INTO articles (title, text) VALUES ('{$param['title']}', '{$param['text']}')";
+        $sql = "INSERT INTO articles (title, text) VALUES ('{$params['title']}', '{$params['text']}')";
         return $this->db->pdo->query($sql);
     }
 
-    function updateArticle($param)
+    function updateArticle($params)
     {
-        $sql = "UPDATE articles SET title = '{$param['title']}', text = '{$param['text']}' WHERE id = {$param['id']}";
+        $sql = "UPDATE articles SET title = '{$params['title']}', text = '{$params['text']}' WHERE id = {$params['id']}";
         return $this->db->pdo->query($sql);
     }
 

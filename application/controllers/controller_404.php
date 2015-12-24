@@ -4,6 +4,6 @@ class Controller_404 extends Controller
 {
     function action_index()
     {
-        $this->view->generate('index.php', array());
+        $this->view->generate('404/index', array());
     }
 }

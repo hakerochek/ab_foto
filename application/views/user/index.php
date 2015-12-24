@@ -20,6 +20,8 @@
                 <th><?php echo $row['name']; ?></th>
                 <th><?php echo $row['age']; ?></th>
                 <th><?php echo $row['password']; ?></th>
+                <th><a href="/user/delete/id/<?php echo $row['id'];?>">Delete</a></th>
+                <th><a href="/user/edit/id/<?php echo $row['id'];?>">Edit</a></th>
             </tr>
             <?php endwhile; ?>
             </tbody>

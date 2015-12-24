@@ -26,7 +26,8 @@ class Controller_Article extends Controller
 
     public function action_add()
     {
-        if (!empty($this->params['title']) && !empty($this->params['text'])) {
+        if (!empty($this->params['title']) && !empty($this->params['text']))
+        {
             $this->model->addArticle($this->params);
             $this->redirect('article');
         } else {

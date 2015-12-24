@@ -1,4 +1,5 @@
 <?php
+session_start();
 $basepath = dirname(dirname(__FILE__));
 
 require_once $basepath . '/config.php';

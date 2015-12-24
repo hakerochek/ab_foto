@@ -61,6 +61,7 @@
                     </ul>
                 </li>
                 <li><a href="/article/Index">Articles</a> </li>
+                <li><a href="/gallery/Index">Gallery</a> </li>
             </ul>
 
         </div>
@@ -69,6 +70,7 @@
 </nav>
 
 <div class="container">
+    <?php $this->showMessage(); ?>
     <?php include 'application/views/' . $content_view . '.php'; ?>
 </div>
 <!-- /.container -->
